@@ -132,13 +132,15 @@ img {
 /* About Us Page */
 #aboutvideo {
     max-width: 100%;
-    height: 400px;
+    height: 100%;
+    padding: 30px;
 }
 .about {
     display: flex;
     justify-content: space-evenly;
     font-size: large;
     padding: 30px;
+    margin: 20px;
     border: solid var(--darkcolorbase--);
     border-style: var(--bigboxborderstyle--);
     background-color: var(--bigboxbackgroundcolor--);
@@ -203,6 +205,12 @@ h2 {
 }
 
 /* Responsive layout */
+@media (max-width: 1000px) {
+    #aboutvideo {
+        display: none;
+    }
+}
+
 @media (max-width: 768px) {
     .topproducts {
         display: flex;
