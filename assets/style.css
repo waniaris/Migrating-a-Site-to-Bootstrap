@@ -48,15 +48,6 @@ body {
     width: 50px;
     height: auto;
 }
-h1 {
-    display: flex;
-    justify-content: center;
-    font-style: italic;
-    font-size: 35px;
-    padding: 15px;
-    margin: 5 px;
-}
-
 .crsl-banner{
   display: flex;
   justify-content: center;
@@ -73,12 +64,6 @@ img {
     max-width: 50%;
     max-height: 500px;
     height: auto;
-}
-.headertopproducts {
-    display: flex;
-    justify-content: center;
-    padding: 30px;
-    margin: 10 px;
 }
 .topproducts {
     display: flex;
