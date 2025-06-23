@@ -7,7 +7,44 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/style.css">
+    <!-- jQuery -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <style>
+    label {
+        display: inline-block; width: 5em;
+    }
+    fieldset div {
+        margin-bottom: 2em;
+    }
+    fieldset .help {
+        display: inline-block;
+    }
+    .ui-tooltip {
+        width: 210px;
+    }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    <script>
+    $( function() {
+        var tooltips = $( "[title]" ).tooltip({
+        position: {
+            my: "left top",
+            at: "right+5 top-5",
+            collision: "none"
+        }
+        });
+    } );
+    $( function() {
+        $( ".widget input[type=submit], .widget a, .widget button" ).button();
+        $( "form button, form input[type=submit]").on( "click", function( event ) {
+        event.preventDefault();
+        } );
+    } );
+    </script>
 </head>
+
 <body>
      <!-- Navigation Bar -->
     <nav class="topnav navbar navbar-expand-lg navbar-light bg-light">
@@ -18,7 +55,7 @@
         <div class="topnav collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="./index.htm">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./about.htm">About</a>
@@ -32,7 +69,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="https://onwhats.app/solusisihat" target="_blank">Buy Now</a>
-                    <a class="dropdown-item" href="./contactus.htm">Contact Us</a>
+                    <a class="dropdown-item" href="#">Contact Us</a>
                     </div>   
                 </li>
             </ul>
@@ -41,61 +78,34 @@
 
     <!-- Header -->
     <header>
-        <h1>Bringing you the best honey from the wild...</h1>
+        <h1>Contact Us</h1>
     </header>
 
-    <!-- Carousel -->
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img id="img-banner" src="./assets/images/carousel1.jpeg" class="d-block w-100" alt="image banner 1">
-            </div>
-            <div class="carousel-item">
-                <img id="img-banner" src="./assets/images/carousel2.jpeg" class="d-block w-100" alt="image banner 2">
-            </div>
-            <div class="carousel-item">
-                <img id="img-banner" src="./assets/images/carousel3.jpeg" class="d-block w-100" alt="image banner 3">
-            </div>
+    <!-- Form -->
+    <form class="contact" action="submit.php" method="post" id="form-box">
+        <div class="div-contact-form">
+            <img id="img-contact" src="https://images.pexels.com/photos/1310534/pexels-photo-1310534.jpeg" alt="Image by freepik">
         </div>
-    </div>
+    <fieldset>
+        <div class="div-contact-form">
+        <div>
+            <label for="username">Name</label>
+            <input class=contactbox id="lbl-username" name="username" title="Please provide your name">
+            </div>
+            <div>
+            <label for="email">Email</label>
+            <input class=contactbox id="lbl-email" name="email" title="Please provide your email">
+            </div>
+            <div>
+            <label for="message">Message</label>
+            <textarea title="Your message" class="contactbox" type="text" id="lbl-message" name="message" rows="20" cols="20"></textarea>
+        </div>
+        <div class="widget">
+        <input type="submit" value="Submit" id="btnSubmit">
+        </div>
 
-    <!-- Top 3 Products -->
-     <section class="headertopproducts">
-        <h1>Top Products</h1>
-    </section>
-    <div class="topproducts">
-        <div class="topproduct">
-            <img id=top3image src="./assets/images/mq430-HL.png" alt="Honey 430g highland">
-            <div class="card-body">
-                <h3>430g (highland)</h3>
-                <h4>£9.99</h4>
-                <div class="d-grid gap-2 col-8 mx-auto">
-                    <a href="https://onwhats.app/solusisihat" target="_blank" id="btn-buy" class="btn btn-primary" type="button">Buy Now</a>
-                </div>
-            </div>
-        </div>
-        <div class="topproduct">
-            <img id=top3image src="./assets/images/ms100pcs.png" alt="Honey Stick 100pcs">
-            <div class="card-body">
-                <h3>100 pieces (stick)</h3>
-                <h4>£19.99</h4>
-                <div class="d-grid gap-2 col-8 mx-auto">
-                    <a href="https://onwhats.app/solusisihat" target="_blank" id="btn-buy" class="btn btn-primary" type="button">Buy Now</a>
-                </div>
-            </div>
-        </div>
-        <div class="topproduct">
-            <img id=top3image src="./assets/images/mq1kg-HL.png" alt="Honey 1kg highland">
-            <div class="card-body">
-                <h3>1kg (highland)</h3>
-                <h4>£19.99</h4>
-                <div class="d-grid gap-2 col-8 mx-auto">
-                    <a href="https://onwhats.app/solusisihat" target="_blank" id="btn-buy" class="btn btn-primary" type="button">Buy Now</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    </fieldset>
+    </form>
     <!-- Footer -->
     <div class="quicklink">
         <div class="container">
@@ -115,7 +125,7 @@
                             <ul>
                                 <li><a href="./contactus.htm">Contact Us</a></li>
                                 <li><a href="https://onwhats.app/solusisihat" target="_blank">Order Now</a></li>
-                                <li><a href="#">Home</a></li>
+                                <li><a href="./index.htm">Home</a></li>
                             </ul>
                         </nav>
                 </div>
