@@ -82,13 +82,14 @@ img {
 }
 .topproducts {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     flex: 1 1 300px;
     border-radius: 5px;
     flex-direction: row;
     flex-wrap: wrap;
 }
 .topproduct {
+    flex: 1 1 calc(25% - 7rem);
     background-color: var(--lightcolorbase--);
     width: 200px;
     padding: 10px;
