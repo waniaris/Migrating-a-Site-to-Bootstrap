@@ -131,11 +131,6 @@ img {
     border-style: var(--bigboxborderstyle--);
     background-color: var(--bigboxbackgroundcolor--);
 }
-h2 {
-    display: flex;
-    justify-content: left;
-    font-size: 22px;
-}
 #solusisihatlogo {
     width: 30px;
     height: 30px;
